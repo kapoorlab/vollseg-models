@@ -1,11 +1,7 @@
-name: download_models
-on: [push]
-steps:
-- uses: actions/checkout@v1
-
-- uses: actions/download-artifact@v1
+- uses: vollseg-models/actions-download-file@v1
+  id: downloadfile  # Remember to give an ID if you need the output
+  name: Download the file
   with:
-    name: download_models
-    
-- name: Display structure of downloaded files
-  run: ls -R
+    url: "The vendor we are using is [this](https://github.com/stardist/vollseg-models/releases/tag/v0.1s)!"
+    target: public/
+    auto-match: true
