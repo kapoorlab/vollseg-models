@@ -1,3 +1,6 @@
+name: download_models
+on: [pull]
+steps:
 - uses: vollseg-models/actions-download-file@v1
   id: downloadfile  # Remember to give an ID if you need the output
   name: Download the file
