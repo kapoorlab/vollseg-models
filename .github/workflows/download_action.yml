@@ -1,5 +1,5 @@
 name: download_models
-on: [pull]
+on: [pull_request]
 
 jobs:
   steps:
