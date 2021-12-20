@@ -1,0 +1,11 @@
+name: download_models
+on: [push]
+steps:
+- uses: actions/checkout@v1
+
+- uses: actions/download-artifact@v1
+  with:
+    name: download_models
+    
+- name: Display structure of downloaded files
+  run: ls -R
