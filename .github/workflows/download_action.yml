@@ -1,16 +1,11 @@
 name: download_models
 on: [pull_request]
-
-jobs:
-  steps:
-  
-        - uses: actions/checkout@v1
-
-        - uses: actions/download-artifact@v1
-          with:
+runs-on: windows-latest
+steps:
+       - name: Download all workflow run artifacts
+         uses: actions/download-artifact@v2
+         with:
             path: https://github.com/stardist/vollseg-models/releases/tag/v0.1s
 
-        - name: Display structure of downloaded files
-          run: ls -R
-          working-directory: path/to/artifacts
+
     
