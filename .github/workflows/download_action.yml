@@ -1,6 +1,6 @@
 name: Download models
 
-on: [pull_request]
+on: [pull_request,push]
 
 jobs:
   job_1:
